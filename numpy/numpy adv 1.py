@@ -30,7 +30,7 @@ for row in a:
 
 # iterating single element by flatening array.
 print("Iterating for single element from array")
-for cell in a.flat: # a.ravel() also works here
+for cell in a.flat: # a.ravel() , a.flatten() also works here
     print(cell)
 
 # 3. Stacking together two arrays
