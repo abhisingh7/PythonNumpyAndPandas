@@ -62,3 +62,19 @@ print("\n",np.vsplit(a,2)) # (axis = 1 => row)Horizontally splitting into 2 equa
 result = np.vsplit(a,2)
 print("\n",result[0])
 print("\n",result[1])
+
+print()
+# 5. Indexing with boolean array
+print("Indexing with boolean array...")
+a = np.arange(12).reshape(3,4)
+print("Array: \n",a)
+
+b = a > 4 #comparing each element greater than 4 or not
+print("Array b: \n",b)
+
+print("\n",a[b]) # wherever b is true it returns value of those elements
+
+# IF we want to replace the element with some other value then we can do this assignment
+print("Assigning some different value if found True for a>4")
+a[b]= -1
+print("\n",a)
