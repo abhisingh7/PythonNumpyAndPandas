@@ -2,34 +2,34 @@ import pandas as pd
 
 # 1. Read CSV
 print("1. Creating dataframe from csv file...\n")
-df = pd.read_csv("..\\files\\stock_data.csv")
+df = pd.read_csv("stock_data.csv")
 print(df)
 
 # 2. sometimes we have an extra row above our columns in csv, we can skip that row from our df
 print("\n2. Creating dataframe by skipping few rows to get a good header\n")
-df = pd.read_csv("..\\files\\stock_data2.csv", skiprows=1)
+df = pd.read_csv("stock_data2.csv", skiprows=1)
 # df = pd.read_csv("..\\files\\stock_data2.csv", header=1) # Both skiprows and header works same
 print(df)
 
 # 3. sometimes we don't have header in our csv
 print("\n3. sometimes we don't have header in our csv, so we are creating one\n")
-df = pd.read_csv("..\\files\\stock_data3.csv", header=None,
+df = pd.read_csv("stock_data3.csv", header=None,
                  names=['ticker','eps','revenue', 'price', 'people'])
 print(df)
 
 # 4. Creating dataframe of selected rows instead of whole csv data
 print("\n4. Creating dataframe of selected rows instead of whole csv data...\n")
-df = pd.read_csv("..\\files\\stock_data.csv", nrows=3)
+df = pd.read_csv("stock_data.csv", nrows=3)
 print(df)
 
 # 5. Clean up messy data. Turning not available values into NaN
 print("\n5. Turning not available values into NaN...\n")
-df = pd.read_csv("..\\files\\stock_data.csv", na_values=["not available","n.a."])
+df = pd.read_csv("stock_data.csv", na_values=["not available","n.a."])
 print(df)
 
 # 6. Another way of cleaning up
 print("\n6. Another way of cleaning up...\n")
-df = pd.read_csv("..\\files\\stock_data.csv", na_values={
+df = pd.read_csv("stock_data.csv", na_values={
     'eps': ["not available", "n.a."],
     'revenue': ["not available", "n.a.", -1],
     'people': ["not available", "n.a."],
@@ -62,7 +62,7 @@ print("\n##############################################################")
 
 # 10. Read excel
 print("10. Creating dataframe from excel file...\n")
-df = pd.read_excel("..\\files\\stock_data.xlsx", "sheet1")
+df = pd.read_excel("stock_data.xlsx", "sheet1")
 print(df)
 
 # 11. Reading excel and creating df by converting specific cells in a column
@@ -80,7 +80,7 @@ def convert_eps_cell(cell):
     if cell == "not available":
         return None
     return cell
-df = pd.read_excel("..\\files\\stock_data.xlsx", "sheet1", converters={
+df = pd.read_excel("stock_data.xlsx", "sheet1", converters={
     'people': convert_people_cell,
     'eps': convert_eps_cell
     })

@@ -2,12 +2,12 @@ import pandas as pd
 
 # 1. Creating dataframe using csv
 print("\n1. Creating dataframe using csv...\n")
-df = pd.read_csv("..\\files\\weather_data.csv")
+df = pd.read_csv("weather_data.csv")
 print(df)
 
 # 2. Creating dataframe using excel file
 print("\n2. Creating dataframe using excel file...\n")
-df = pd.read_excel("..\\files\\weather_data.xlsx","sheet1")
+df = pd.read_excel("weather_data.xlsx","sheet1")
 print(df)
 
 # 3. Creating dataframe using python dictionary

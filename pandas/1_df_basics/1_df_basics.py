@@ -3,7 +3,7 @@ import pandas as pd
 # 1. Creating data frame by reading csv file
 print("1. Creating data frame by reading csv file...\n")
     # If file is in different location, mention full path
-df = pd.read_csv("..\\files\\weather_data.csv")
+df = pd.read_csv("weather_data.csv")
 print(df)
 print()
 # 2. Creating data frame via python dictionary

@@ -2,13 +2,13 @@ import pandas as pd
 
 # 1. Converting day column into date type
 print("\n1. Converting day column into date type...\n")
-df = pd.read_csv("..\\files\\weather_info.csv")
+df = pd.read_csv("weather_info.csv")
 print(df)
 print("\n type of day column:", type(df.day[0]))
 
     # converting datatype of day column values from str to timestamp
 print("\nconverting datatype of day column values from str to timestamp...\n")
-df = pd.read_csv("..\\files\\weather_info.csv", parse_dates=["day"])
+df = pd.read_csv("weather_info.csv", parse_dates=["day"])
 print(df)
 print("\n type of day column:", type(df.day[0]))
 
