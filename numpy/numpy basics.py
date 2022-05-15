@@ -11,7 +11,7 @@ l = range(1000)
 print(sys.getsizeof(5)*len(l))
 
 array  = np.arange(1000)
-print(array.size*array.itemsize)
+print(array.size*array.itemsize)   # array.size gives length of numpy array and array.itemsize give size of each element in numpy array.
 
 # Comparing time of list operations vs numpy array operations
 
