@@ -43,6 +43,17 @@ print(np.zeros((3,4)))
 print("Printing array of ones...")
 print(np.ones((3,4)))
 
+# creating 2d array with 1 as diagonal values, rest are zeros.
+print('Printing 2d array with 1 as diagonal values, rest are zeros...')
+arr = np.eye(4)
+print('diaglonal values : ',arr)
+
+# creating 2d array with some other numbers as diagonal values, rest are zeros.
+print('Printing 2d array with some other numbers as diagonal values, rest are zeros...')
+arr = np.diag([1,2,3,4])
+print('diaglonal values : ',arr)
+
+
 # Using arange for creating array for fixed number of elements => arange(start, end, step).
 print("using arange method...")
 print(np.arange(1,5))
