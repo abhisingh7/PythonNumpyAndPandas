@@ -5,9 +5,9 @@ print("1. Creating data frame by reading csv file...\n")
     # If file is in different location, mention full path
 df = pd.read_csv("weather_data.csv")
 print(df)
-print()
+
 # 2. Creating data frame via python dictionary
-print("2. Creating data frame via python dictionary...\n")
+print("\n2. Creating data frame via python dictionary...\n")
 weather_data = {
     'day': ['1/1/2017','1/2/2017','1/3/2017','1/4/2017','1/5/2017','1/6/2017'],
     'temperature': [32,35,28,24,32,31],
@@ -31,7 +31,7 @@ print("\nDF Tail: \n",df.tail())
 print("\nDF Tail: \n",df.tail(2))
 
 # 3. Indexing and slicing in dataframe
-print("3. Indexing and slicing in dataframe...\n")
+print("\n3. Indexing and slicing in dataframe...\n")
 
 print("\nDF Slicing by rows: \n",df[2:5])
 
@@ -76,8 +76,8 @@ print("\nGet day and temperature columns only where temperature = maximum temp:\
       df[['day', 'temperature']][df['temperature']== df['temperature'].max()])
 
 
-# 6. Setting index
-print("\n6. Setting index...\n")
+# 7. Setting index
+print("\n7. Setting index...\n")
     # pandas automatically give index to each row from 0 to rows-1.
 print("\n",df)
 print("\nIndex range of dataframe:\n", df.index)
@@ -96,8 +96,8 @@ print("printing updated dataframe:\n", df)
 
 print("\n Using loc to get a particular row on the basis of index:\n",df.loc['1/3/2017'])
 
-# 7. Resetting index
-print("\n7. Resetting index...\n")
+# 8. Resetting index
+print("\n8. Resetting index...\n")
 
     # to reset index
 df.reset_index(inplace=True)
